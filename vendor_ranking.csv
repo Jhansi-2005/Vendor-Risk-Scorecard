@@ -1,0 +1,6 @@
+Rank,Supplier,Total_Orders,Average_Defect_Rate,Average_Delivery_Days,Compliance_Rate,Average_Risk_Score,High_Risk_Orders,High_Risk_Percentage,Risk_Category
+1,Delta_Logistics,171,0.1087,10.87,60.82,1.38,76,44.44,High Risk
+2,Beta_Supplies,156,0.0827,11.25,75.64,1.31,57,36.54,High Risk
+3,Gamma_Co,143,0.045,10.27,86.01,0.79,25,17.48,Medium Risk
+4,Epsilon_Group,166,0.0261,10.88,98.19,0.31,1,0.6,Low Risk
+5,Alpha_Inc,141,0.0189,10.79,93.62,0.27,3,2.13,Low Risk
