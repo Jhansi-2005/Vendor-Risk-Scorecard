@@ -780,3 +780,95 @@ Machine Learning & Data Analytics Academic Project
 ### ⭐ Vendor Risk Scorecard — From Supplier Data to Intelligent Procurement Decisions
 
 </p>
+---
+
+# 📝 Assumptions
+
+The following assumptions were made during the development of the Vendor Risk Scorecard:
+
+1. The historical supplier performance data is assumed to be representative of general vendor performance.
+
+2. A higher defect rate is assumed to indicate a higher level of supplier quality risk.
+
+3. Longer delivery times are assumed to indicate increased delivery and operational risk.
+
+4. A `No` compliance value is assumed to represent higher compliance risk.
+
+5. Price savings are considered as one of the procurement performance indicators.
+
+6. Missing defective-unit values were treated as zero while a separate `Defect_Data_Missing` indicator was retained to preserve information about the original missing values.
+
+7. Missing delivery dates were treated as unavailable delivery information rather than assigning an artificial delivery date.
+
+8. The `High_Risk` target was created using the engineered vendor risk indicators and risk score.
+
+9. The Machine Learning model is intended to support procurement decisions and is not intended to completely replace human judgment.
+
+10. The historical data and model results are assumed to be sufficiently reliable for demonstrating the vendor risk assessment approach.
+
+---
+
+# ⚠️ Limitations
+
+Although the project provides useful vendor risk insights, it has several limitations:
+
+1. The dataset contains only **777 records**, which is relatively small for a production-level Machine Learning system.
+
+2. The dataset contains only **five suppliers**, so the model may not generalize to a large number of suppliers.
+
+3. Some records originally contained missing delivery dates and defective-unit information.
+
+4. Historical supplier performance may not always accurately represent future supplier performance.
+
+5. The model uses only a limited number of risk indicators:
+   - Defect Rate
+   - Delivery Days
+   - Price Savings Percentage
+   - Compliance
+
+6. Other important supplier factors such as financial stability, market conditions, transportation disruptions, supplier capacity, contract history, and geopolitical risks are not included.
+
+7. The `High_Risk` target is derived from engineered risk indicators. Therefore, the model learns patterns based on the rules used to create the target.
+
+8. The model should not be used as the only factor when making important procurement or supplier-selection decisions.
+
+9. SHAP explains how features contribute to the model's prediction, but SHAP values do not prove that a feature directly causes supplier risk.
+
+10. The Streamlit application is a demonstration and decision-support system and would require additional validation, monitoring, and larger datasets before being used in a real production environment.
+
+---
+
+# 🎯 Conclusions
+
+The **Vendor Risk Scorecard** successfully demonstrates how Machine Learning and Explainable AI can be used to assess supplier performance and support procurement decision-making.
+
+The project followed the complete workflow from:
+
+```text
+Data Collection
+      ↓
+Data Understanding
+      ↓
+Data Cleaning
+      ↓
+Exploratory Data Analysis
+      ↓
+Feature Engineering
+      ↓
+Risk Indicator Creation
+      ↓
+Feature Scaling
+      ↓
+Train/Test Split
+      ↓
+Machine Learning Model
+      ↓
+Model Evaluation
+      ↓
+Vendor Risk Ranking
+      ↓
+Explainable AI using SHAP
+      ↓
+Streamlit Application
+      ↓
+Streamlit Cloud Deployment
